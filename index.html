@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light only">
+  <title>Orbit Simulation</title>
+
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="space">
+  <div class="earth"></div>
+  <div class="path"></div>
+  <div class="moon"></div>
+  </div>
+  <div class="controls">
+    <label>Apoapsis</label><input type="range" min=50 max=1000 value=200 id="apoapsis">
+    <label>Periapsis</label><input type="range" min=50 max=1000 value=100 id="periapsis">
+    <label>Eccentricity (%)</label><input type="range" min=0 max=100 value=50 id="eccentricity">
+    <br>
+    <label>Speed</label><input type="range" min=1 max=20 value=3 id="speed">
+  </div>
+  <a href='https://replit.com/@lubinpappalardo/' class="credits">@LubinPappalardo<a>
+  <script src="script.js"></script>
+</body>
+
+</html>
