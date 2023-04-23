@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+:root {
+  --moonSize: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(0, 0%, 0%);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2693&q=80");
+  opacity: 0.3;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+  color: white;
+  font-family: Poppins;
+}
+
+.space {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.earth {
+  width: calc(3.7 * var(--moonSize));
+  aspect-ratio: 1;
+  background: radial-gradient(blue, green);
+  background-image: url("https://pngimg.com/uploads/earth/earth_PNG33.png");
+  background-size: 120% 120%;
+  background-position: center;
+  border-radius: 50%;
+  /*animation: earth_spin 10s linear infinite;*/
+  box-shadow: 0 0 5px 0 hsl(203, 100%, 50%);
+}
+
+@keyframes earth_spin {
+  to { rotate: 360deg; }
+}
+
+.path {
+  position: absolute;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  left: calc(50vw + (100px / 2));
+  top: 50%;
+}
+
+.moon {
+  position: absolute;
+  width: var(--moonSize);
+  aspect-ratio: 1;
+  background: grey;
+  background-image: url("https://pngimg.com/uploads/moon/moon_PNG34.png");
+  background-size: 120% 120%;
+  background-position: center;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease-in-out;
+  /*animation: moon_spin 10s linear infinite;*/
+}
+
+@keyframes moon_spin {
+  to { rotate: 360deg; }
+}
+
+.controls {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  alin-items: center;
+  top: 20px;
+  left: 20px;
+}
+
+.credits {
+  position: absolute;
+  bottom: 20px;
+  color: hsl(0, 0%, 50%);
+}
